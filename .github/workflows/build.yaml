@@ -24,8 +24,8 @@ jobs:
         uses: docker/build-push-action@v2
         id: docker_build
         with:
-          context: demo01/WebApplication1
-          file: Dockerfile
+          context: ./demo01/WebApplication1
+          file: ./demo01/WebApplication1/Dockerfile
           builder: ${{steps.buildx.outputs.name}}
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/demo_git_action
